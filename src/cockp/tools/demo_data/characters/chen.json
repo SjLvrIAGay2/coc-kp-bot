@@ -1,0 +1,189 @@
+{
+  "id": "chen",
+  "name": "陈雨",
+  "owner_id": "10003",
+  "version": 1,
+  "era": "1920s",
+  "age": 28,
+  "occupation": "记者",
+  "attributes": {
+    "STR": 60,
+    "CON": 60,
+    "SIZ": 60,
+    "DEX": 65,
+    "APP": 60,
+    "INT": 60,
+    "POW": 60,
+    "EDU": 60
+  },
+  "skills": {
+    "侦查": 65,
+    "信用评级": 10,
+    "其他语言(英语)": 31,
+    "历史": 25,
+    "图书馆使用": 60,
+    "心理学": 30,
+    "急救": 55,
+    "攀爬": 40,
+    "格斗(斗殴)": 50,
+    "潜行": 50,
+    "聆听": 30,
+    "艺术与手艺(摄影)": 40,
+    "说服": 45,
+    "闪避": 52,
+    "母语": 60,
+    "跳跃": 20,
+    "克苏鲁神话": 0
+  },
+  "occupation_skills": [
+    "艺术与手艺(摄影)",
+    "历史",
+    "图书馆使用",
+    "其他语言(英语)",
+    "心理学",
+    "说服",
+    "侦查",
+    "聆听"
+  ],
+  "allocations": {
+    "侦查": {
+      "base": 25,
+      "occupation": 40,
+      "interest": 0
+    },
+    "信用评级": {
+      "base": 0,
+      "occupation": 10,
+      "interest": 0
+    },
+    "其他语言(英语)": {
+      "base": 1,
+      "occupation": 30,
+      "interest": 0
+    },
+    "历史": {
+      "base": 5,
+      "occupation": 20,
+      "interest": 0
+    },
+    "图书馆使用": {
+      "base": 20,
+      "occupation": 40,
+      "interest": 0
+    },
+    "心理学": {
+      "base": 10,
+      "occupation": 20,
+      "interest": 0
+    },
+    "急救": {
+      "base": 30,
+      "occupation": 0,
+      "interest": 25
+    },
+    "攀爬": {
+      "base": 20,
+      "occupation": 0,
+      "interest": 20
+    },
+    "格斗(斗殴)": {
+      "base": 25,
+      "occupation": 0,
+      "interest": 25
+    },
+    "潜行": {
+      "base": 20,
+      "occupation": 0,
+      "interest": 30
+    },
+    "聆听": {
+      "base": 20,
+      "occupation": 10,
+      "interest": 0
+    },
+    "艺术与手艺(摄影)": {
+      "base": 5,
+      "occupation": 35,
+      "interest": 0
+    },
+    "说服": {
+      "base": 10,
+      "occupation": 35,
+      "interest": 0
+    },
+    "闪避": {
+      "base": 32,
+      "occupation": 0,
+      "interest": 20
+    }
+  },
+  "derived": {
+    "hp": 12,
+    "mp": 12,
+    "san": 60,
+    "mov": 8,
+    "build": 0,
+    "damage_bonus": "0"
+  },
+  "luck": 60,
+  "cash": 20.0,
+  "assets": 500.0,
+  "equipment": [
+    {
+      "id": "notebook",
+      "name": "笔记本",
+      "quantity": 1,
+      "era": "1920s"
+    },
+    {
+      "id": "pencil",
+      "name": "铅笔",
+      "quantity": 2,
+      "era": "1920s"
+    }
+  ],
+  "background": {
+    "description": "图片记者，曾在码头装卸队工作，熟悉河岸小路。",
+    "belief": "记录未经证实的说法，同时寻找独立证据。",
+    "important_person": "报社主编许岚",
+    "important_place": "河岸旧阅览室",
+    "treasured_item": "铜壳怀表",
+    "trait": "愿意与伙伴共享已经确认的公开线索"
+  },
+  "creation": {
+    "method": "rolled",
+    "raw_attributes": {
+      "STR": 60,
+      "CON": 60,
+      "SIZ": 60,
+      "DEX": 65,
+      "APP": 60,
+      "INT": 60,
+      "POW": 60,
+      "EDU": 60
+    },
+    "luck_rolls": [
+      60
+    ],
+    "source": "原创演示；骰值为可重复测试资料，不是生产掷骰"
+  },
+  "age_evidence": {
+    "deductions": {},
+    "education_rolls": [
+      [
+        40,
+        1
+      ]
+    ]
+  },
+  "sources": {
+    "all": {
+      "kind": "source_fact",
+      "source": "原创软件演示",
+      "confidence": 1
+    }
+  },
+  "review_history": [],
+  "locked": false,
+  "recognized_confirmed": true
+}

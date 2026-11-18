@@ -1,0 +1,690 @@
+{
+  "id": "harbor_bell",
+  "title": "雾港的第十三声钟",
+  "version": 1,
+  "era": "1920s",
+  "location": "虚构的海港小城雾港",
+  "theme": "证据与传言、选择与代价",
+  "background": "1925年秋，报社收到一封关于午夜钟声与失踪搬运工的匿名来信。",
+  "hooks": [
+    "调查钟楼停摆后仍响起的钟声",
+    "寻找未按约回家的搬运工许远"
+  ],
+  "world_truth": "许远发现旧仓库地下的共鸣石，钟声会让听者把旧记忆误认为当下；走私者借传言掩盖地下运输。",
+  "start_scene": "dock",
+  "scenes": [
+    {
+      "id": "dock",
+      "name": "潮湿码头",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "public_description": "雾气遮住半条河岸。门边有带水的泥脚印，报童在一盏路灯下整理晚报。",
+      "entry_conditions": [],
+      "connections": [
+        "archive",
+        "warehouse",
+        "riverside"
+      ],
+      "public_connections": [
+        "archive",
+        "warehouse",
+        "riverside"
+      ],
+      "time_cost_minutes": 10,
+      "kp_notes": "钟楼不应强制成为唯一路线。"
+    },
+    {
+      "id": "archive",
+      "name": "旧阅览室",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "public_description": "煤油灯照着受潮的港务记录，管理员请来客轻声说话。",
+      "entry_conditions": [],
+      "connections": [
+        "dock",
+        "clocktower",
+        "riverside"
+      ],
+      "public_connections": [
+        "dock",
+        "clocktower",
+        "riverside"
+      ],
+      "time_cost_minutes": 10,
+      "kp_notes": ""
+    },
+    {
+      "id": "warehouse",
+      "name": "河岸仓库",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "public_description": "卷起一半的门后堆着空木箱，一名守门人把灯挡在胸前。",
+      "entry_conditions": [],
+      "connections": [
+        "dock",
+        "riverside",
+        "clocktower"
+      ],
+      "public_connections": [
+        "dock",
+        "riverside",
+        "clocktower"
+      ],
+      "time_cost_minutes": 10,
+      "kp_notes": "守门人受雇搬货，知道运输时间，不知道共鸣石来源。"
+    },
+    {
+      "id": "riverside",
+      "name": "石阶与岔巷",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "public_description": "河岸石阶湿滑，岔巷通向一段废弃的货运轨道。",
+      "entry_conditions": [],
+      "connections": [
+        "dock",
+        "warehouse",
+        "archive"
+      ],
+      "public_connections": [
+        "dock",
+        "warehouse",
+        "archive"
+      ],
+      "time_cost_minutes": 10,
+      "kp_notes": "此处提供绕过守门人的替代入口；失败可以付出时间找到。"
+    },
+    {
+      "id": "clocktower",
+      "name": "旧钟楼",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "public_description": "铁门开着一条缝，塔身时针永远指着十一点五十九分。",
+      "entry_conditions": [],
+      "connections": [
+        "archive",
+        "warehouse"
+      ],
+      "public_connections": [
+        "archive",
+        "warehouse"
+      ],
+      "time_cost_minutes": 10,
+      "kp_notes": "共鸣石可以被包裹隔音，直接破坏需要另行说明风险。"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "newsboy",
+      "name": "阿宁",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "dock",
+      "public_description": "一个把帽檐压得很低的报童。",
+      "public_presence": true,
+      "public_name": "报童",
+      "public_dialogue": "我记得那位搬运工往仓库走了。你们要问人，最好趁换班前去。",
+      "motivation": "赚够离开雾港的车票钱",
+      "knowledge": [
+        "搬运工最后走向仓库"
+      ],
+      "secrets": [
+        "阿宁替走私者送过一张空白装货单"
+      ],
+      "relationships": {},
+      "speech_style": "短句、犹豫后才补充细节",
+      "plan": "午夜前回家",
+      "attributes": {},
+      "skills": {},
+      "resources": {},
+      "dialogue_topics": [
+        {
+          "id": "last_seen",
+          "keywords": [
+            "最后",
+            "钟",
+            "搬运工"
+          ],
+          "text": "我记得那位搬运工往仓库走了。至于他之后去了哪里，我没有看见。"
+        }
+      ]
+    },
+    {
+      "id": "librarian",
+      "name": "陶先生",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "archive",
+      "public_description": "戴着旧眼镜的港务档案管理员。",
+      "public_presence": true,
+      "public_name": "档案管理员",
+      "public_dialogue": "记录里有两次同样的误报。我可以给你们找出日期。",
+      "motivation": "保护公共档案",
+      "knowledge": [
+        "旧钟楼曾被用于实验共振装置"
+      ],
+      "secrets": [
+        "陶先生曾经在钟声中看见亡友"
+      ],
+      "relationships": {},
+      "speech_style": "精确引用日期",
+      "plan": "",
+      "attributes": {},
+      "skills": {},
+      "resources": {},
+      "dialogue_topics": [
+        {
+          "id": "records",
+          "keywords": [
+            "记录",
+            "日期"
+          ],
+          "text": "这几份公开记录可以借给你们查阅；请明早归还。",
+          "promise": "保留港务记录供调查员查阅到明早",
+          "clue_id": "ledger"
+        }
+      ]
+    },
+    {
+      "id": "guard",
+      "name": "罗叔",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "warehouse",
+      "public_description": "衣袖沾着煤灰的守门人。",
+      "public_presence": true,
+      "public_name": "仓库守门人",
+      "public_dialogue": "我只负责看门。没凭据的人别往地下走。",
+      "motivation": "保住工作并避免伤人",
+      "knowledge": [
+        "午夜有一批货从地下运出"
+      ],
+      "secrets": [
+        "罗叔把许远藏在安全的小储物间"
+      ],
+      "relationships": {},
+      "speech_style": "硬声说话，遇到证据会让步",
+      "plan": "形势不利时逃入岔巷",
+      "attributes": {},
+      "skills": {
+        "格斗(斗殴)": 25,
+        "闪避": 15
+      },
+      "resources": {
+        "hp": 8
+      },
+      "dialogue_topics": []
+    }
+  ],
+  "clues": [
+    {
+      "id": "mud_print",
+      "name": "泥脚印",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "dock",
+      "public_description": "泥印中混着仓库常见的白色石灰，朝仓库方向延伸。",
+      "visibility": {
+        "scope": "public",
+        "recipients": []
+      },
+      "discovery": "直接观察可见；仔细追踪可检定侦查",
+      "linked_clues": [
+        "ledger",
+        "shift_note"
+      ],
+      "triggers": [],
+      "alternative_routes": [
+        "询问报童",
+        "沿河岸寻找货运口"
+      ],
+      "kp_truth": "",
+      "access_condition": {
+        "location": {
+          "scene_id": "dock"
+        }
+      }
+    },
+    {
+      "id": "ledger",
+      "name": "港务旧记录",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "archive",
+      "public_description": "三次钟声报告都对应同一个旧货运班次。",
+      "visibility": {
+        "scope": "public",
+        "recipients": []
+      },
+      "discovery": "获得管理员协助或图书馆使用成功",
+      "linked_clues": [
+        "resonance_note"
+      ],
+      "triggers": [],
+      "alternative_routes": [
+        "守门人说明换班时间"
+      ],
+      "kp_truth": "",
+      "access_condition": null
+    },
+    {
+      "id": "private_letter",
+      "name": "未寄出的信",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "archive",
+      "public_description": "只有陈雨读到：许远请求老友在钟声响起时守住小储物间，里面有人需要保护。",
+      "visibility": {
+        "scope": "private",
+        "recipients": [
+          "10003"
+        ]
+      },
+      "discovery": "与角色旧识关系相关的私人资料",
+      "linked_clues": [
+        "shift_note"
+      ],
+      "triggers": [],
+      "alternative_routes": [],
+      "kp_truth": "信中之人是受共鸣影响而短暂失忆的许远本人",
+      "access_condition": null
+    },
+    {
+      "id": "shift_note",
+      "name": "换班便笺",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "warehouse",
+      "public_description": "便笺写着午夜前从河侧门交接，遇见陌生人先离开，不要动手。",
+      "visibility": {
+        "scope": "kp",
+        "recipients": []
+      },
+      "discovery": "交谈说服、战斗后拾取或从河岸入口发现",
+      "linked_clues": [
+        "resonance_note"
+      ],
+      "triggers": [],
+      "alternative_routes": [
+        "守门人主动交出",
+        "绕过仓库从货运口拾到副本"
+      ],
+      "kp_truth": "",
+      "access_condition": null
+    },
+    {
+      "id": "resonance_note",
+      "name": "共鸣装置说明",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "clocktower",
+      "public_description": "装置说明称，厚布和软木可以显著减弱石块传出的震动。",
+      "visibility": {
+        "scope": "kp",
+        "recipients": []
+      },
+      "discovery": "查看装置旁可读的标签",
+      "linked_clues": [],
+      "triggers": [],
+      "alternative_routes": [],
+      "kp_truth": "隔绝共鸣能使陷入旧记忆的人逐渐恢复",
+      "access_condition": null
+    }
+  ],
+  "timeline": [
+    {
+      "id": "shift",
+      "name": "换班",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "at_minute": 60,
+      "condition": {
+        "minute_at_least": 60
+      },
+      "public_description": "远处响起换班的汽笛。",
+      "kp_effect": "守门人开始准备离开；未发现便笺仍可从河侧口取得",
+      "effects": [
+        {
+          "kind": "flag",
+          "name": "shift_changed",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "bell",
+      "name": "钟声",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "at_minute": 120,
+      "condition": {
+        "not": {
+          "flag": "resonance_isolated"
+        }
+      },
+      "public_description": "一声沉闷的钟鸣穿过河雾。",
+      "kp_effect": "未隔音者经历一次理智事件；不得自动重复扣理智",
+      "effects": []
+    }
+  ],
+  "encounters": [
+    {
+      "id": "investigate",
+      "name": "比对足迹",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "dock",
+      "kind": "investigation",
+      "trigger": "调查员对照白灰来源",
+      "parameters": {
+        "skill": "侦查",
+        "difficulty": "regular",
+        "failure_cost_minutes": 10
+      },
+      "alternatives": [
+        "询问报童",
+        "寻找石灰包装"
+      ]
+    },
+    {
+      "id": "guard_talk",
+      "name": "与守门人交谈",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "warehouse",
+      "kind": "social",
+      "trigger": "调查员解释来意",
+      "parameters": {
+        "skill": "说服"
+      },
+      "alternatives": [
+        "展示记录直接获得信任",
+        "从河侧门进入"
+      ]
+    },
+    {
+      "id": "guard_fight",
+      "name": "慌乱的冲突",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "warehouse",
+      "kind": "combat",
+      "trigger": "谈判破裂且玩家选择动手",
+      "parameters": {
+        "enemy": "guard",
+        "hp": 8,
+        "dex": 20
+      },
+      "alternatives": [
+        "退后谈判",
+        "允许对方逃离"
+      ]
+    },
+    {
+      "id": "wet_chase",
+      "name": "湿滑石阶追逐",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "riverside",
+      "kind": "chase",
+      "trigger": "玩家选择追赶逃离者",
+      "parameters": {
+        "hazard": "wet_steps",
+        "skill": "跳跃",
+        "damage": "1D3"
+      },
+      "alternatives": [
+        "放弃追赶保住证据"
+      ]
+    },
+    {
+      "id": "echo",
+      "name": "不合时宜的回声",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "scene_id": "clocktower",
+      "kind": "sanity",
+      "trigger": "第一次清楚听到个人旧记忆的回声",
+      "parameters": {
+        "success_loss": "0",
+        "failure_loss": "1D6"
+      },
+      "alternatives": [
+        "先包裹装置",
+        "远离声源"
+      ]
+    }
+  ],
+  "endings": [
+    {
+      "id": "quiet",
+      "name": "沉默的钟",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "condition": {
+        "all": [
+          {
+            "flag": "worker_found"
+          },
+          {
+            "flag": "resonance_isolated"
+          }
+        ]
+      },
+      "public_description": "河雾中的钟声停止，许远终于认出了归家的路。",
+      "rewards": {
+        "sanity": "1D6"
+      }
+    },
+    {
+      "id": "evidence",
+      "name": "保全证据",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "condition": {
+        "fact": "mud_print"
+      },
+      "public_description": "报社得到一份足够刊登的调查报告，未解的钟声留给下一次选择。",
+      "rewards": {
+        "sanity": "1D3"
+      }
+    },
+    {
+      "id": "retreat",
+      "name": "安全撤退",
+      "provenance": {
+        "kind": "source_fact",
+        "source": "",
+        "sha256": "",
+        "pdf_page": null,
+        "locator": "",
+        "confidence": 1.0,
+        "source_event_id": null
+      },
+      "condition": {
+        "minute_at_least": 0
+      },
+      "public_description": "你们在雾散前离开河岸，彼此记住了尚未回答的问题。",
+      "rewards": {}
+    }
+  ],
+  "handouts": [
+    {
+      "id": "anonymous",
+      "visibility": {
+        "scope": "public"
+      },
+      "text": "钟停了，声音却没有停。午夜以前，到码头来。"
+    }
+  ],
+  "special_rules": [],
+  "questions": [],
+  "provenance": {
+    "all": {
+      "kind": "source_fact",
+      "source": "原创测试模组，由软件项目生成；非出版模组原文",
+      "sha256": "",
+      "pdf_page": null,
+      "locator": "",
+      "confidence": 1.0,
+      "source_event_id": null
+    }
+  },
+  "import_issues": [],
+  "source_excerpts": [],
+  "prepared": true,
+  "review_history": []
+}
